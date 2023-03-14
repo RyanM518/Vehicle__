@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Vehicle.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #808080;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6a8759;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Vehicle.java</font>
+</center></td></tr></table>
+<pre><span class="s0">// The Base Vehicle Class, implements the Speedometer interface</span>
+<span class="s2">public class </span><span class="s1">Vehicle </span><span class="s2">implements </span><span class="s1">Speedometer{</span>
+    <span class="s0">//base (Class wide) variables</span>
+    <span class="s2">protected </span><span class="s1">String brandName = </span><span class="s3">&quot;&quot;</span><span class="s2">;</span>
+    <span class="s2">protected double </span><span class="s1">speed = </span><span class="s4">0.0</span><span class="s2">;</span>
+    <span class="s2">protected int </span><span class="s1">passengers = </span><span class="s4">0</span><span class="s2">;</span>
+    <span class="s2">protected double </span><span class="s1">cargoWeight = </span><span class="s4">0.0</span><span class="s2">;</span>
+    <span class="s0">//Base default constructor</span>
+    <span class="s2">public </span><span class="s1">Vehicle(){</span>
+        <span class="s1">brandName = </span><span class="s3">&quot;BMW&quot;</span><span class="s2">;</span>
+        <span class="s1">speed = </span><span class="s4">130.0</span><span class="s2">;</span>
+        <span class="s1">passengers = </span><span class="s4">4</span><span class="s2">;</span>
+        <span class="s1">cargoWeight = </span><span class="s4">2000.0</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public </span><span class="s1">Vehicle(String inBrand</span><span class="s2">, double </span><span class="s1">inSpeed</span><span class="s2">, int </span><span class="s1">inPassengers</span><span class="s2">, double</span>
+            <span class="s1">inCargo){</span>
+        <span class="s1">brandName = inBrand</span><span class="s2">;</span>
+        <span class="s1">speed = inSpeed</span><span class="s2">;</span>
+        <span class="s1">passengers = inPassengers</span><span class="s2">;</span>
+        <span class="s1">cargoWeight = inCargo</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s0">//getters and setters</span>
+    <span class="s2">public </span><span class="s1">Vehicle(String inBrand){</span>
+        <span class="s1">brandName = inBrand</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public </span><span class="s1">String getBrand(){</span>
+        <span class="s2">return </span><span class="s1">brandName</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public void </span><span class="s1">setBrandName(String inBrand){</span>
+        <span class="s1">brandName = inBrand</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public double </span><span class="s1">getSpeed(){</span>
+        <span class="s2">return </span><span class="s1">speed</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public void </span><span class="s1">setSpeed(</span><span class="s2">double </span><span class="s1">inSpeed){</span>
+        <span class="s1">speed = inSpeed</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public int </span><span class="s1">getPassengers(){</span>
+        <span class="s2">return </span><span class="s1">passengers</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public void </span><span class="s1">setPassengers(</span><span class="s2">int </span><span class="s1">inPassengers){</span>
+        <span class="s1">speed = inPassengers</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public double </span><span class="s1">getCargoWeight(){</span>
+        <span class="s2">return </span><span class="s1">cargoWeight</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s2">public void </span><span class="s1">setCargoWeight(</span><span class="s2">double </span><span class="s1">inCargoWeight){</span>
+        <span class="s1">cargoWeight = inCargoWeight</span><span class="s2">;</span>
+    <span class="s1">}</span>
+    <span class="s0">//Base toString</span>
+    <span class="s2">public </span><span class="s1">String toString(){</span>
+        <span class="s1">String result = </span><span class="s3">&quot;&quot;</span><span class="s2">;</span>
+        <span class="s1">result = </span><span class="s3">&quot;Brand: </span><span class="s2">\t\t\t</span><span class="s3">&quot; </span><span class="s1">+ getBrand() + </span><span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;Speed (mph): </span><span class="s2">\t</span><span class="s3">&quot; </span><span class="s1">+ getSpeed() + </span><span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;Passengers: </span><span class="s2">\t</span><span class="s3">&quot; </span><span class="s1">+ getPassengers() + </span><span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">&quot; </span><span class="s1">+</span>
+                <span class="s3">&quot;Cargo (lbs): </span><span class="s2">\t</span><span class="s3">&quot; </span><span class="s1">+ getCargoWeight() + </span><span class="s3">&quot;</span><span class="s2">\n</span><span class="s3">&quot;</span><span class="s2">;</span>
+        <span class="s2">return </span><span class="s1">result</span><span class="s2">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+<span class="s0">//the Speedometer interface to show the speed of any vehicle in the same way</span>
+<span class="s2">interface </span><span class="s1">Speedometer{</span>
+    <span class="s2">public void </span><span class="s1">setSpeed(</span><span class="s2">double </span><span class="s1">inSpeed)</span><span class="s2">;</span>
+    <span class="s2">public double </span><span class="s1">getSpeed()</span><span class="s2">;</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
